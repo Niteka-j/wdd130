@@ -1,4 +1,18 @@
 /* ==========================================================================
+   CSS Variables
+   ========================================================================== */
+:root {
+    --primary-color: #1a3c70;
+    --text-color: #333333;
+    --dark-text: #222222;
+    --bg-color: #ffffff;
+    --nav-link-color: #3b2880;
+    --nav-link-hover: #1a0dab;
+    --overlay-bg: rgba(22, 52, 102, 0.85);
+    --border-color: #e0e0e0;
+}
+
+/* ==========================================================================
    Base & Reset Styles
    ========================================================================== */
 * {
@@ -9,9 +23,9 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    color: #333333;
+    color: var(--text-color);
     line-height: 1.5;
-    background-color: #ffffff;
+    background-color: var(--bg-color);
     max-width: 900px;
     margin: 0 auto;
     padding: 10px 20px;
@@ -40,22 +54,19 @@ header nav {
 }
 
 header nav a {
-    color: #3b2880;
+    color: var(--nav-link-color);
     text-decoration: underline;
     font-size: 0.9rem;
 }
 
 header nav a:hover {
-    color: #1a0dab;
+    color: var(--nav-link-hover);
 }
 
 /* ==========================================================================
-   Hero Section Layout (Grid Overlay)
+   Hero Section Layout (Absolute Overlay)
    ========================================================================== */
 .hero {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
     position: relative;
     margin-top: 15px;
     margin-bottom: 25px;
@@ -63,21 +74,19 @@ header nav a:hover {
 
 /* Main Background Hero Image */
 .hero > img {
-    grid-column: 1 / -1;
-    grid-row: 1 / -1;
     width: 100%;
     height: auto;
-    object-fit: cover;
     display: block;
 }
 
 /* Top Hero Banner Title */
 .hero h1 {
-    grid-column: 1 / -1;
-    grid-row: 1;
-    background-color: rgba(22, 52, 102, 0.85);
-    /* Semi-transparent dark blue */
-    color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--overlay-bg);
+    color: var(--bg-color);
     text-align: center;
     padding: 12px 10px;
     font-size: 1.8rem;
@@ -87,31 +96,28 @@ header nav a:hover {
 
 /* Bottom Hero Article Overlay */
 .hero article {
-    grid-column: 1 / -1;
-    grid-row: 3;
-    background-color: rgba(22, 52, 102, 0.85);
-    /* Semi-transparent dark blue */
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: var(--overlay-bg);
+    color: var(--bg-color);
     padding: 15px 20px;
-    gap: 15px;
-    margin: 20px;
     z-index: 2;
 }
 
 .hero article p {
     font-size: 0.88rem;
     line-height: 1.35;
-    flex: 1;
 }
 
 .hero article img {
+    float: right;
     width: 110px;
     height: 75px;
     object-fit: cover;
-    border: 1px solid #ffffff;
+    border: 1px solid var(--bg-color);
+    margin-left: 15px;
 }
 
 /* ==========================================================================
@@ -123,9 +129,8 @@ section {
 }
 
 section h2 {
-    background-color: #1a3c70;
-    /* Dark blue section bar */
-    color: #ffffff;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
     padding: 10px;
     font-size: 1.25rem;
     font-weight: bold;
@@ -135,7 +140,7 @@ section h2 {
 section p {
     text-align: left;
     font-size: 0.9rem;
-    color: #222222;
+    color: var(--dark-text);
     padding: 0 5px;
     line-height: 1.4;
 }
@@ -151,9 +156,9 @@ section:last-of-type p {
 footer {
     margin-top: 30px;
     padding-top: 10px;
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid var(--border-color);
     font-size: 0.85rem;
-    color: #333333;
+    color: var(--text-color);
 }
 
 footer p {
