@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Wild Horizon Expeditions | WDD 130</title>
+    <meta name="description"
+      content="Get in touch with Wild Horizon Expeditions. Find our contact info, location map, meet our expert team, or send us a message today.">
+    <meta name="author" content="BIGIRIMANA Jolis">
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.png" alt="Wild Horizon Expeditions logo" width="35" height="35">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main class="contact-container">
+        <h1>Contact Us</h1>
+
+        <!-- Company Information & Google Map -->
+        <section class="company-details">
+            <h2>Reach Out to Us</h2>
+            <p>Have questions about an upcoming trip or need help planning your next adventure?
+                We're here to help!</p>
+
+            <div class="info-and-map">
+                <div class="contact-info">
+                    <p><strong>Address:</strong> Kanyenkoko, Rumonge, RC 1710</p>
+                    <p><strong>Phone:</strong> (+257) 685-16044 | (+257) 795-54115</p>
+                    <p><strong>Email:</strong> <a
+                          href="mailto:info@wildhorizone.com">info@wildhorizone.com</a>
+                    </p>
+                </div>
+
+                <div class="map-container">
+                    <iframe
+                      src="https://www.google.com/maps/@-3.981982,29.4382013,14z?entry=ttu&g_ep=EgoyMDI2MDcyOS4wIKXMDSoASAFQAw%3D%3D"
+                      width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
+                      title="Wild Horizon Expeditions Location Map">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Employee Profiles Section -->
+        <section class="team-profiles">
+            <h2>Meet Our Team</h2>
+            <div class="employee-grid">
+                <figure>
+                    <img src="images/sarah.JPG" alt="Sarah Jenkins, Lake Tanganyika Guide"
+                      width="100" height="100">
+                    <figcaption>
+                        <strong>Sarah Jenkins</strong><br>
+                        Lake Tanganyika Guide
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/alex.JPG" alt="Alex Rivera, Safety & Operations Director"
+                      width="100" height="100">
+                    <figcaption>
+                        <strong>Alex Rivera</strong><br>
+                        Safety & Operations Director
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/maria.JPG" alt="Maria Chen, Trip & Reservation Coordinator"
+                      width="100" height="100">
+                    <figcaption>
+                        <strong>Maria Chen</strong><br>
+                        Trip & Reservation Coordinator
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="form-section">
+            <h2>Send Us a Message</h2>
+            <form action="#" method="post" class="contact-form">
+
+                <div class="form-item">
+                    <label for="user-name">Full Name:</label>
+                    <input type="text" id="user-name" name="user_name" required placeholder="  ">
+                </div>
+
+                <div class="form-item">
+                    <label for="user-email">Email Address:</label>
+                    <input type="email" id="user-email" name="user_email" required placeholder="  ">
+                </div>
+
+                <fieldset class="radio-fieldset">
+                    <legend>Purpose of Message:</legend>
+                    <div class="radio-option">
+                        <input type="radio" id="general" name="purpose" value="General Inquiry"
+                          checked>
+                        <label for="general">General Inquiry</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="reservation" name="purpose"
+                          value="Reservation Question">
+                        <label for="reservation">Reservation Question</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="suggestion" name="purpose"
+                          value="Website Suggestion">
+                        <label for="suggestion">Website Suggestion</label>
+                    </div>
+                </fieldset>
+
+                <div class="form-item">
+                    <label for="user-message">Message:</label>
+                    <textarea id="user-message" name="user_message" rows="5" required
+                      placeholder="How can we help you?"></textarea>
+                </div>
+
+                <div class="form-item checkbox-item">
+                    <input type="checkbox" id="newsletter" name="newsletter" value="subscribe">
+                    <label for="newsletter">Please subscribe me to the monthly newsletter</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 🌴 Wild Horizon Expeditions 🌴 BIGIRIMANA Jolis</p>
+        <nav class="socialmedia">
+            <a href="https://facebook.com">
+                <img src="images/facebook.ico" alt="Facebook Icon">
+            </a>
+            <a href="https://linkedin.com">
+                <img src="images/linkedin.png" alt="LinkedIn Icon">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/instagram.png" alt="Instagram Icon">
+            </a>
+        </nav>
+    </footer>
+</body>
+
+</html>
