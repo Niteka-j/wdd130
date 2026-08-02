@@ -3,13 +3,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    /* Keeps logo on left and nav centered/spaced */
     gap: 80px;
-    /* Space between logo and navigation */
     background-color: #dcd0ff;
-    /* Light lavender background */
     border: 1px solid #333333;
-    /* Outer dark border */
     padding: 25px 60px;
 }
 
@@ -19,7 +15,6 @@ header img {
     height: 110px;
     object-fit: cover;
     background-color: #e0e0e0;
-    /* Placeholder gray */
     display: block;
 }
 
@@ -34,16 +29,14 @@ header nav a {
     display: inline-block;
     padding: 10px 28px;
     background-color: #ffffff;
-    /* White button fill */
     color: #000000;
     text-decoration: none;
     font-family: Arial, sans-serif;
     font-size: 15px;
-    font-weight: normal;
+    font-weight: 500;
     border: 1px solid #333333;
     margin-right: -1px;
-    /* Prevents double borders between buttons */
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 /* Rounded outer corners for the segmented bar */
@@ -58,34 +51,9 @@ header nav a:last-child {
     margin-right: 0;
 }
 
-nav a:hover {
-    color: #008000;
-}
-
-/* Segmented Navigation Buttons */
-nav.nav-bar {
-    display: flex;
-    align-content: center;
-}
-
-nav.nav-bar a {
-    padding: 10px 22px;
-    background-color: #ffffff;
-    border: 1px solid #222;
-    border-right: none;
-    text-decoration: none;
-    color: #000000;
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: background-color 0.2s ease;
-}
-
-nav.nav-bar a:last-child {
-    border-right: 1px solid #222;
-}
-
-nav.nav-bar a:hover {
+header nav a:hover {
     background-color: #f0f0f0;
+    color: #008000;
 }
 
 /* Company Header Text */
@@ -122,7 +90,7 @@ nav.nav-bar a:hover {
     width: 100%;
     height: 100%;
     min-height: 320px;
-    border: 1px solid #ccc !important;
+    border: 1px solid #ccc;
     background-color: #e5e5e5;
 }
 
@@ -134,7 +102,6 @@ nav.nav-bar a:hover {
     margin: 0 auto;
 }
 
-/* Hide the main section heading if you want it identical to the design */
 .form-section h2 {
     display: none;
 }
@@ -185,7 +152,7 @@ nav.nav-bar a:hover {
     opacity: 1;
 }
 
-/* Radio Fieldset (Purpose of Message) - CONSOLIDATED */
+/* Radio Fieldset (Purpose of Message) */
 .radio-fieldset {
     border: none;
     padding: 0;
@@ -269,21 +236,16 @@ nav.nav-bar a:hover {
     background-color: #c0c0c0;
 }
 
-/* Main container styling to match the bordered box */
+/* Team Profiles Section */
 .team-profiles {
     background-color: #f4f4f4;
-    /* Light grey background */
     border: 1px solid #888;
-    /* Dark border around the section */
     padding: 20px 20px 40px 20px;
     max-width: 800px;
-    /* Adjusts the box width */
     margin: 20px auto;
-    /* Centers the section on the page */
     font-family: Arial, sans-serif;
 }
 
-/* Heading styling */
 .team-profiles h2 {
     text-align: center;
     font-size: 24px;
@@ -292,39 +254,28 @@ nav.nav-bar a:hover {
     color: #000;
 }
 
-/* Flexbox layout for the grid */
 .employee-grid {
     display: flex;
     justify-content: center;
-    /* Centers the profiles inside the box */
     gap: 80px;
-    /* Adds even spacing between each profile */
     flex-wrap: wrap;
-    /* Allows wrapping on smaller screens */
 }
 
-/* Figure styling to align image and text */
 .employee-grid figure {
     margin: 0;
-    /* Removes browser default margins */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     width: 130px;
-    /* Constrains width to match the visual proportion */
 }
 
-/* Image styling */
 .employee-grid img {
     background-color: #e6e6e6;
-    /* Light gray fallback for missing images */
     margin-bottom: 8px;
-    /* Spacing between the image and the name */
     display: block;
 }
 
-/* Caption styling */
 .employee-grid figcaption {
     font-size: 13px;
     color: #222;
@@ -337,7 +288,6 @@ footer {
     justify-content: space-between;
     align-items: center;
     background-color: #dcd0ff;
-    /* Light purple lavender background */
     border: 1px solid #222;
     padding: 20px 40px;
     max-width: 1000px;
@@ -381,7 +331,7 @@ footer p {
         gap: 5px;
     }
 
-    .team-grid {
+    .employee-grid {
         flex-direction: column;
         gap: 20px;
     }
